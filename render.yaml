@@ -1,0 +1,11 @@
+# Exported from Render on 2025-04-04T14:40:14Z
+services:
+- type: web
+  name: flowerpred
+  runtime: python
+  repo: https://github.com/hrishabh-dev/flowerpred
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app
+version: "1"
